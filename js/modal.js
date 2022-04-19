@@ -14,16 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
        }); 
     }); 
  
-    closeButtons.forEach(function(item){
+    let a = closeButtons.forEach(function(item){
         item.addEventListener('click', function() {
             el.style.display='none';
         });
     }); 
 
-
-    // overlay.addEventListener('click', function() {
-        
-    // });
+    el.addEventListener('click',(e)=>{
+        if(e.target.classList.contains('popup-call') || e.target.classList.contains('popup-close')){
+            el.style.display='none';
+        }
+    })
 }); 
 
 
